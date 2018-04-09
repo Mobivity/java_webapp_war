@@ -7,7 +7,7 @@ From maven:3.3-jdk-8-onbuild
 From tomcat:8.0-jre8
 
 #Deploying to tomcat server
-COPY --from=0 /usr/src/test-deploy-to-container/target/mywebapp.war ${CATALINA_HOME}/webapps/mywebapp.war
+COPY --from=0 /usr/src/app/test-deploy-to-container/target/mywebapp.war ${CATALINA_HOME}/webapps/mywebapp.war
 
 ##Running the tomcat
 CMD ["catalina.sh", "run"]
